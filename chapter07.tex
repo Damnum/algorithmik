@@ -1,0 +1,24 @@
+\section{$NP$-Vollst"andigkeit}
+Eulerkreise: Kreis auf dem jede Kante genau einmal vorkommt. Polynomiell\\
+Hamiltonkreis: Kreis, auf dem jeder Knoten genau einmal vorkommt. $NP$-schwer.\\
+K"urzeste Wege: Dijkstra. Polynomiell\\
+Gesucht l"angster Weg: $NP$-schwer\\
+Boolesche Formel: $2 CNF ((x_1 \vee \neg x_2) \wedge (\neg x_1 \vee x_3) \wedge ...)$ polynomiell.\\
+$3 CNF: ((x_1 \vee x_2 \vee \neg x_3) \wedge (x_4 \vee x_5 \vee x_6) \wedge ...)$: $NP$ - schwer.\\\\
+$P$: Klasse der Probleme, die in polynomieller Zeit l"osbar sind.\\
+$NP$: Klasse der Probleme, die in polynomieller Zeit "`verifizierbar"' sind, d.h. legt man einen L"osungsvorschlag vor, so kann in ponynomieller Zeit "uberpr"uft werden, ob es sich um eine L"osung handelt.\\\\
+Beispiel: Erf"ullbarkeit einer $3 CNF$-Formel $F$.\\
+Gibt man eine Belegung der Variablen vor, so kann in polynomieller Zeit gepr"uft werden, ob diese Belegung $F$ "`wahr"' macht.\\\\
+Offensichtlich $P \subseteq NP$. $P = NP$?\\\\
+%include Fig01
+$NPC$: Ein Problem $x$ ist in $NPC$, wenn es in $NP$ liegt und jedes andere Problem in $NP$ l"asst sich auf $x$ "`reduzieren"'. MaxFlow ist in $PC$ ($P$-complete).\\\\
+1. Entscheidungsproblem (Ergebnis ja/nein) versus Optimierungsproblem (Ergebnis k"urzester Weg).\\
+Klasse $P$, $NP$, $NPC$, beziehungen auf Entscheidungsprobleme. Forme Optimierungsprobleme in Entscheidungsprobleme um. Beispie: Graph $G$, $u$, $v$ Knoten k"urzester Weg von $u$ nach $u, v, k$. Entscheidungsproblem: gibt es einen k"urstesten Weg von $u$ nach $v$ der L"ange $\geq k$.\\\\
+Wenn wir zeigen wollen, dass das Optimierungsproblem schwer ist und wir k"onnen zeigen, dass das Entscheidungsproblem schwer ist, sind wir fertig.\\\\
+2. Reduktionen: mittles $e$ Reduktion wird ein Entscheidungsproblem $A$ auf ein Entscheidungsproblem $B$ "`reduziert"'. $A\stackrel{}{\rightarrow} B$
+Wichtige Eigenschaft der Reduktion sollen sein (im Fall $NP$):\\\\
+- Sie soll polynomiell berechenbar sein
+- ist $\alpha$ eine Instanz von $A$, $\beta$ die Transformation von $\alpha$, so soll $\beta$ eine Instanz von $\beta$ sein und $\alpha$ habe die Antwort "`ja"' genau dann wenn $\beta$ die Antwort "`ja"' hat. ("`polynomielle Reduktion"')\\\\
+Fall 1: Ist $A\stackrel{poly.}{\rightarrow}B$ und $B$ poly. l"osbar, so auch $A$.\\
+Fall 2: Angemommen, wir wissen $A$ ist "`schwer"' und es gibt eine poly. Reduktion $A\stackrel{poly.}{\rightarrow}B$, dann ist auch $B$ "`schwer"'.
+
